@@ -2,7 +2,7 @@ body{
     background-color:#dfdfdf;
     color:#415161;
     font-family:'Dosis';
-    background-image: 'https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?cs=srgb&dl=pexels-hristo-fidanov-1252890.jpg&fm=jpg';
+    background-image: url(https://www.krqe.com/wp-content/uploads/sites/12/2022/12/AdobeStock_81556974.jpeg?w=2560&h=1440&crop=1);
 }
 
 .title{
@@ -39,7 +39,7 @@ body{
  }
 
 .box{
-    background-color: #9ab0c76b;
+    background-color: #9ab0c7ab;
     width: 90%;
     margin: auto;
     margin-top: 2em;
@@ -69,8 +69,9 @@ body{
 }
 
 .card{
+    color:#283644;
     transition: 0.2s;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: center;
 }
 
