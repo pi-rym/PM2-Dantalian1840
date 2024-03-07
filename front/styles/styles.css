@@ -5,7 +5,7 @@ body{
     background-image: url(https://www.krqe.com/wp-content/uploads/sites/12/2022/12/AdobeStock_81556974.jpeg?w=2560&h=1440&crop=1);
 }
 
-.title{
+#title{
     font-size: 4em;
     font-weight: bold;
     padding: 0.4em;
@@ -14,7 +14,7 @@ body{
 
 }
 
-.navegator{
+#navegator{
    display: flex;
    flex-direction: row;
    gap: 40px;
@@ -26,11 +26,11 @@ body{
    color: #dfdfdf;
 }
 
-.navegatorMenu{
+#navegatorMenu{
     transition: 0.2s;
 }
 
-.navegatorMenu:hover{
+#navegatorMenu:hover{
     font-size: 2.1rem;
 }
 
@@ -77,4 +77,12 @@ body{
 
 .card:hover{
     color: #3e4dd4;
+}
+
+.techImgs{
+    height: 13em;
+}
+
+#colors{
+    color:whitesmoke
 }

@@ -11,7 +11,10 @@ const renderCards = (data) => {
         const navegator = document.createElement('a');
     
         movieCard.classList.add('elementos');
-        newTitle.classList.add('card');
+        movieCard.classList.add('card')
+        movieCard.classList.add('col')
+        movieCard.classList.add('card-size')
+        newTitle.classList.add('tarjeta');
     
         newTitle.innerHTML = item.title;
         newPoster.src = item.poster;
@@ -25,6 +28,8 @@ const renderCards = (data) => {
         tarjetas.appendChild(movieCard);
     });
 }
+
+
 
 
 // // ? Interacción de la API por medio de un botón
