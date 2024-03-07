@@ -1,88 +1,87 @@
-body{
-    background-color:#dfdfdf;
-    color:#415161;
-    font-family:'Dosis';
-    background-image: url(https://www.krqe.com/wp-content/uploads/sites/12/2022/12/AdobeStock_81556974.jpeg?w=2560&h=1440&crop=1);
+body {
+  background-color: #dfdfdf;
+  color: #415161;
+  font-family: "Dosis";
+  background-image: url(https://www.krqe.com/wp-content/uploads/sites/12/2022/12/AdobeStock_81556974.jpeg?w=2560&h=1440&crop=1);
 }
 
-#title{
-    font-size: 4em;
-    font-weight: bold;
-    padding: 0.4em;
-    background-color: #415161;
-    color:#dfdfdf;
-
+#title {
+  font-size: 4em;
+  font-weight: bold;
+  padding: 0.4em;
+  background-color: #415161;
+  color: #dfdfdf;
 }
 
-#navegator{
-   display: flex;
-   flex-direction: row;
-   gap: 40px;
-   justify-content: center;
-   font-weight: bold;
-   font-size: 2rem;
-   padding: 0.5em 0em 0.5em 38em;
-   background-color: #60758a;
-   color: #dfdfdf;
+#navegator {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5em 0em 0.5em 38em;
+  background-color: #60758a;
+  color: #dfdfdf;
 }
 
-#navegatorMenu{
-    transition: 0.2s;
+#navegatorMenu {
+  transition: 0.2s;
 }
 
-#navegatorMenu:hover{
-    font-size: 2.1rem;
+#navegatorMenu:hover {
+  font-size: 2.1rem;
 }
 
-.sections{
+.sections {
   padding: 1em 0em 1em 0em;
- }
-
-.box{
-    background-color: #9ab0c7ab;
-    width: 90%;
-    margin: auto;
-    margin-top: 2em;
-    border: 2px solid  rgb(162, 176, 190);
-    padding: 3em;
-    display: flex;
-    justify-content: space-around;
 }
 
-.elementos{
-    width: 20em;
-    height: 27em;
-    padding: 1em;
-    transition: 0.2s;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
+.box {
+  background-color: #9ab0c7ab;
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+  border: 2px solid rgb(162, 176, 190);
+  padding: 3em;
+  display: flex;
+  justify-content: space-around;
 }
 
-.elementos img{
-    height: 20em;
-  }
-  
-.elementos:hover{
-    background-color: #60758a7a;
+.elementos {
+  width: 20em;
+  height: 27em;
+  padding: 1em;
+  transition: 0.2s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
-.card{
-    color:#283644;
-    transition: 0.2s;
-    font-size: 1.7em;
-    text-align: center;
+.elementos img {
+  height: 20em;
 }
 
-.card:hover{
-    color: #3e4dd4;
+.elementos:hover {
+  background-color: #60758a7a;
 }
 
-.techImgs{
-    height: 13em;
+.card {
+  color: #283644;
+  transition: 0.2s;
+  font-size: 1.7em;
+  text-align: center;
 }
 
-#colors{
-    color:whitesmoke
+.card:hover {
+  color: #3e4dd4;
+}
+
+.techImgs {
+  height: 13em;
+}
+
+#colors {
+  color: whitesmoke;
 }
