@@ -1,11 +1,9 @@
 class carritoCompra {
   constructor() {
     this.products = [];
-    this.id = 0;
   }
 
   agregarProducto(name, price, quantity) {
-    this.id++;
     const product = { name, price, quantity };
     this.products.push(product);
   }
@@ -24,11 +22,8 @@ class carritoCompra {
   }
 
   aplicarDescuento(porcentaje, total) {
-    const dotPercentage = porcentaje / 100;
-    const discount = total * dotPercentage;
-    const totalDescuento = total - discount;
-
-    return totalDescuento;
+    const discount = total * (porcentaje / 100);
+    return total - discount;
   }
 }
 

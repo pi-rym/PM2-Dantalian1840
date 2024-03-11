@@ -38,29 +38,23 @@ body {
 }
 
 .box {
-  background-color: #9ab0c7ab;
-  width: 90%;
-  margin: auto;
-  margin-top: 2em;
-  border: 2px solid rgb(162, 176, 190);
+  background-color: #9ab0c779;
+  width: 70em;
+  margin-top: 5em;
+  border: 1px solid rgb(162, 176, 190);
   padding: 3em;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .elementos {
-  width: 20em;
-  height: 27em;
+  width: 60em;
   padding: 1em;
   transition: 0.2s;
   align-items: center;
   display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
-
-.elementos img {
-  height: 20em;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .elementos:hover {
