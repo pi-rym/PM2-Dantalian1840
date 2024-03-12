@@ -11,7 +11,6 @@ const renderCards = (data) => {
     movieCard.classList.add("card");
     divPrincipal.classList.add("elementos");
     newPoster.classList.add("card-img-top");
-    // newTitle.classList.add("tarjeta");
 
     newTitle.innerHTML = item.title;
     newPoster.src = item.poster;
