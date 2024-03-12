@@ -5,6 +5,13 @@ const axios = require("axios");
 //   renderCards(data);
 // });
 
+// const getFilms = () => {
+//   axios
+//     .get("https://students-api.up.railway.app/movies")
+//     .then(({ data }) => data.forEach(renderCards))
+//     .catch((error) => alert("No se pudo encontrar información"));
+// };
+
 const fetchData = async () => {
   try {
     const data = await axios.get("https://students-api.up.railway.app/movies");
