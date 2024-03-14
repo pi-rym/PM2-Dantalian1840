@@ -30,7 +30,7 @@ body {
 }
 
 #navegatorMenu:hover {
-  font-size: 2.1rem;
+  color: #a9a9a9;
 }
 
 .sections {
@@ -44,7 +44,7 @@ body {
   border: 1px solid rgb(162, 176, 190);
   padding: 3em;
   display: flex;
-  align-items: center;
+  align-self: center;
 }
 
 .elementos {

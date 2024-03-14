@@ -9,6 +9,4 @@ const controller = (req, res) => {
   res.status(200).send("Se recibe una solicitud");
 };
 
-module.exports = {
-  controller,
-};
+module.exports = { controller };
