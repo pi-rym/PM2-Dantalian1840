@@ -3,9 +3,7 @@ const moviesService = require("../services/moviesService");
 module.exports = {
   getAllMovies: async (req, res) => {
     try {
-      console.log("Hasta aquí bien");
       const movies = await moviesService.getMovies();
-      console.log("Hasta aquí bien x3");
       res.status(200).json(movies);
     } catch (error) {
       res.status(500).json({
