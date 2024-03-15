@@ -1,10 +1,5 @@
 const axios = require("axios");
 
-//! Implementar un módulo de servicio de películas. Que este módulo exporte un objeto donde cada propiedad será una función.
-
-//! Implementar clase Movie y responder con instancias.
-//! Dentro del constructor de la clase, arrojar error en caso de que no reciba las propiedades "title" ,"poster" y "director".
-
 class Movies {
   constructor(item) {
     const { title, director, poster, year, duration, genre, rate } = item;
@@ -30,7 +25,6 @@ module.exports = {
   getMovies: async () => {
     try {
       const movies = await axios("https://students-api.up.railway.app/movies");
-      console.log("Hasta aquí bien x2");
       return movies.data.map((moviesData) => new Movies(moviesData));
     } catch (error) {
       return "error", error.message;
