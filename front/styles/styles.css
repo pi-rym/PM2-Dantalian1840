@@ -40,16 +40,17 @@ body {
 
 .box {
   background-color: #9ab0c779;
-  width: 60em;
+  width: auto;
   margin-top: 5em;
   border: 1px solid rgb(162, 176, 190);
   padding: 3em;
   display: flex;
   align-self: center;
+  justify-content: space-around;
 }
 
 .elementos {
-  width: 40em;
+  width: 300px;
   padding: 1em;
   transition: 0.2s;
   align-items: center;

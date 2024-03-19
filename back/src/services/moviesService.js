@@ -3,7 +3,7 @@ const Movie = require("../models/Movie");
 
 class Movies {
   constructor(item) {
-    const { title, director, poster, year, duration, genre, rate } = item;
+    const { title, director, poster, year, genre, rate } = item;
     if (!title || !director || !poster) {
       throw new Error("Faltan datos");
     }
@@ -11,7 +11,6 @@ class Movies {
     this.director = director;
     this.poster = poster;
     this.year = year;
-    this.duration = duration;
     this.genre = genre;
     this.rate = rate;
   }
@@ -30,5 +29,20 @@ module.exports = {
     } catch (error) {
       return "error", error.message;
     }
+  },
+
+  getMovieByID: async (id) => {
+    const movie = await Movie.findById(id);
+    return movie;
+  },
+
+  findMovieByTitle: async (title) => {
+    const movie = await Movie.findOne({ title });
+    return movie;
+  },
+
+  createMovie: async (movie) => {
+    const newMovie = await Movie.create(movie);
+    return newMovie;
   },
 };

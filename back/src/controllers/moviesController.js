@@ -12,10 +12,29 @@ module.exports = {
     }
   },
 
+  getMovieById: async (req, res) => {
+    const { id } = req.params;
+    const movie = await moviesService.getMovieByID(id);
+    res.status(200).json(movie);
+  },
+
+  findMovieByTitle: async (req, res) => {
+    const { title } = req.body;
+    const movie = await moviesService.findMovieByTitle(title);
+    res.status(200).json(movie);
+  },
+
   createMovie: async (req, res) => {
-    const { title, poster, director } = req.body;
+    const { title, director, poster, year, genre, rate } = req.body;
     try {
-      await moviesService.createMovie(title, poster, director);
+      await moviesService.createMovie({
+        title,
+        director,
+        poster,
+        year,
+        genre,
+        rate,
+      });
       res.status(201).json({
         message: "Película creada correctamente",
       });

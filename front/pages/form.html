@@ -37,6 +37,10 @@
                             <input type="text" id="director" name="director" class="form-control" placeholder="Put the movie director" required>
                         </div>
                         <div class="row mb-3">
+                          <label for="poster" class="form-label bold-text">Poster URL:</label>
+                            <input type="text" id="poster" name="poster" class="form-control" placeholder="Put the movie poster." required>
+                        </div>
+                        <div class="row mb-3">
                           <label for="year" class="form-label bold-text">Release year:</label>
                             <input type="text" id="year" name="year" class="form-control" placeholder="Put the release year of the movie" required>
                         </div>
@@ -48,13 +52,11 @@
                           <label for="rate" class="form-label bold-text">Rate:</label>
                             <input type="text" id="rate" name="rate" class="form-control" placeholder="Put the IMDB rate of the movie" required>
                         </div>
-                        <div class="row mb-3">
-                          <label for="poster" class="form-label bold-text">Poster URL:</label>
-                            <input type="text" id="poster" name="poster" class="form-control" placeholder="Put the movie poster." required>
-                        </div>
                         <div class="col-12">
-                          <button class="btn btn-primary" type="submit">Submit</button>
+                          <button id="buttonSubmit" class="btn btn-primary" type="submit">Submit</button>
+                          <button id="buttonClear" class="btn btn-primary" type="submit">Clear inputs</button>
                         </div>
+
               </div>
             </div>
           </div>
