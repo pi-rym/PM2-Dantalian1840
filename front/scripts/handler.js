@@ -32,9 +32,12 @@ const handlerSubmit = () => {
     genre,
     rate
   );
-  // Year & rate is a number validations
 
   validations.validationNumbers(year, rate);
+
+  validations.validationRate(rate);
+
+  validations.validationLink(poster);
 
   //Movies object update
 
@@ -47,8 +50,6 @@ const handlerSubmit = () => {
     genre,
     rate,
   };
-
-  document.getElementById("form").reset();
 };
 
 const handlerClear = () => {
@@ -63,6 +64,7 @@ buttonSubmit.addEventListener("click", async () => {
   try {
     await axios.post("http://localhost:3000/movies", dataMovies);
     alert("Movie sent. All good.");
+    document.getElementById("form").reset();
   } catch (error) {
     throw Error(error.message);
   }

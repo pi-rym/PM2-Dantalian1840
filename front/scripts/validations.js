@@ -40,7 +40,25 @@ const validationFilledForm = (
   }
 };
 
+const validationRate = (rate) => {
+  if (rate <= 0 && rate >= 10) {
+    alert("Please fill rate between 0-10 values");
+    return;
+  }
+};
+
+const validationLink = (link) => {
+  const validFormat = /\.(jpg|png|webp)$/i;
+
+  if (!validFormat.test(link)) {
+    alert("Please use a link with jpg, png or webp");
+    return;
+  }
+};
+
 module.exports = {
   validationNumbers,
   validationFilledForm,
+  validationRate,
+  validationLink,
 };
