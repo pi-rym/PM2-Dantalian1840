@@ -8,7 +8,7 @@ const validateMovie = (req, res, next) => {
     )
   ) {
     return res.status(400).json({
-      error: "Faltan datos",
+      error: "Fill all imputs",
     });
   } else if (yearString.length === 4) {
     next();
