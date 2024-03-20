@@ -1,12 +1,21 @@
 const validateMovie = (req, res, next) => {
-  const { title, poster, director } = req.body;
+  const { title, poster, director, year, duration, genre, rate } = req.body;
+  const yearString = year.toString();
 
-  if (![title, poster, director]) {
-    return res.status(200).json({
+  if (
+    ![title, poster, director, year, duration, genre, rate].every(
+      (item) => item !== undefined && item !== null
+    )
+  ) {
+    return res.status(400).json({
       error: "Faltan datos",
     });
-  } else {
+  } else if (yearString.length === 4) {
     next();
+  } else {
+    return res.status(400).json({
+      error: "El año no es válido",
+    });
   }
 };
 

@@ -25,13 +25,14 @@ module.exports = {
   },
 
   createMovie: async (req, res) => {
-    const { title, director, poster, year, genre, rate } = req.body;
+    const { title, director, poster, year, duration, genre, rate } = req.body;
     try {
       await moviesService.createMovie({
         title,
         director,
         poster,
         year,
+        duration,
         genre,
         rate,
       });

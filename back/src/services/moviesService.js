@@ -1,9 +1,16 @@
 const axios = require("axios");
 const Movie = require("../models/Movie");
 
+// Aquí hay una función
+
+// La función se comunica con la base de datos para pedir la información solicitada por los usuarios.
+// También le da el formato adecuado solicitado y requerido.
+
+// Se puede tener información de: ID, nombre, fechas, año, creación, títulos. Pero se devolverá solo lo solicitado.
+
 class Movies {
   constructor(item) {
-    const { title, director, poster, year, genre, rate } = item;
+    const { title, director, poster, year, duration, genre, rate } = item;
     if (!title || !director || !poster) {
       throw new Error("Faltan datos");
     }
@@ -11,6 +18,7 @@ class Movies {
     this.director = director;
     this.poster = poster;
     this.year = year;
+    this.duration = duration;
     this.genre = genre;
     this.rate = rate;
   }
