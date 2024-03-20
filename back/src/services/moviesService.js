@@ -32,17 +32,29 @@ module.exports = {
   },
 
   getMovieByID: async (id) => {
-    const movie = await Movie.findById(id);
-    return movie;
+    try {
+      const movie = await Movie.findById(id);
+      return movie;
+    } catch (error) {
+      throw Error(error.message);
+    }
   },
 
   findMovieByTitle: async (title) => {
-    const movie = await Movie.findOne({ title });
-    return movie;
+    try {
+      const movie = await Movie.findOne({ title });
+      return movie;
+    } catch (error) {
+      throw Error(error.message);
+    }
   },
 
   createMovie: async (movie) => {
-    const newMovie = await Movie.create(movie);
-    return newMovie;
+    try {
+      const newMovie = await Movie.create(movie);
+      return newMovie;
+    } catch (error) {
+      throw Error(error.message);
+    }
   },
 };
