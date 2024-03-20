@@ -17,6 +17,9 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "axios": "^1.6.7"
+    "axios": "^1.6.7",
+    "D": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0"
   }
 }

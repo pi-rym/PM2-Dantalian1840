@@ -1,9 +1,9 @@
 const app = require("./src/server");
 const dbCon = require("./src/config/dbCon");
+require("dotenv").config();
 
 dbCon().then((res) => {
-  app.listen(3000, () => {
-    console.log("Servidor escucha en el puerto 3000"); //Método que indica escuchar solicitudes
+  app.listen(process.env.PORT, () => {
+    console.log("Server listening"); //Método que indica escuchar solicitudes
   });
 });
-// http://localhost:3000
