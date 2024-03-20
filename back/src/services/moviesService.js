@@ -31,38 +31,22 @@ module.exports = {
   // Leerán la información de un archivo
 
   getMovies: async () => {
-    try {
-      const movies = await Movie.find();
-      return movies.map((moviesData) => new Movies(moviesData));
-    } catch (error) {
-      return "error", error.message;
-    }
+    const movies = await Movie.find();
+    return movies.map((moviesData) => new Movies(moviesData));
   },
 
   getMovieByID: async (id) => {
-    try {
-      const movie = await Movie.findById(id);
-      return movie;
-    } catch (error) {
-      throw Error(error.message);
-    }
+    const movie = await Movie.findById(id);
+    return movie;
   },
 
   findMovieByTitle: async (title) => {
-    try {
-      const movie = await Movie.findOne({ title });
-      return movie;
-    } catch (error) {
-      throw Error(error.message);
-    }
+    const movie = await Movie.findOne({ title });
+    return movie;
   },
 
   createMovie: async (movie) => {
-    try {
-      const newMovie = await Movie.create(movie);
-      return newMovie;
-    } catch (error) {
-      throw Error(error.message);
-    }
+    const newMovie = await Movie.create(movie);
+    return newMovie;
   },
 };

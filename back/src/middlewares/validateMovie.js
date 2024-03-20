@@ -14,7 +14,7 @@ const validateMovie = (req, res, next) => {
     next();
   } else {
     return res.status(400).json({
-      error: "El año no es válido",
+      error: "Invalid year",
     });
   }
 };
