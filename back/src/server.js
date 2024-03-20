@@ -12,11 +12,10 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 
-app.use((req, res, next) => {
-  console.log("PASO POR MI MIDDLEWARE");
-  next();
-});
-
 app.use(router); // Use es un método que encamina la solicitud
+
+app.use((err, req, res, next) => {
+  res.status(err.statusCode || 500).json({ error: err.message });
+});
 
 module.exports = app;
