@@ -1,8 +1,7 @@
-const axios = require("axios");
-
 const buttonSubmit = document.getElementById("buttonSubmit");
 const buttonClear = document.getElementById("buttonClear");
 
+let dataMovies;
 const handlerSubmit = () => {
   const movieData = document.getElementsByClassName("form-movie");
   const title = movieData[0].value;
@@ -35,7 +34,7 @@ const handlerSubmit = () => {
 
   document.getElementById("form").reset();
 
-  const dataMovies = {
+  dataMovies = {
     title,
     director,
     poster,
@@ -44,15 +43,20 @@ const handlerSubmit = () => {
     genre,
     rate,
   };
-
-  console.log(dataMovies);
 };
 
 const handlerClear = () => {
   document.getElementById("form").reset();
 };
 
-axios.post("");
-
 buttonSubmit.addEventListener("click", handlerSubmit);
 buttonClear.addEventListener("click", handlerClear);
+
+buttonSubmit.addEventListener("click", async () => {
+  try {
+    await axios.post("http://localhost:3000/movies", dataMovies);
+    alert("Película enviada correctamente.");
+  } catch (error) {
+    throw Error(error.message);
+  }
+});

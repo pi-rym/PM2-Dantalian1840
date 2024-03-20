@@ -46,7 +46,7 @@ body {
   padding: 3em;
   display: flex;
   align-self: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .elementos {
