@@ -16,7 +16,11 @@ const renderCards = (data) => {
 
     newTitle.innerHTML = item.title;
     newPoster.src = item.poster;
-    newInfo.innerHTML = `Director: ${item.director}<br>Year: ${item.year}<br>Duration: ${item.duration}<br>Genres: ${item.genre}<br>Rate: ${item.rate}`;
+    newInfo.innerHTML = `Director: ${item.director}<br>Year: ${
+      item.year
+    }<br>Duration: ${item.duration}<br>Genres: ${item.genre.join(
+      ", "
+    )}<br>Rate: ${item.rate}`;
     navegator.href = "./index.html";
 
     navegator.appendChild(newTitle);
